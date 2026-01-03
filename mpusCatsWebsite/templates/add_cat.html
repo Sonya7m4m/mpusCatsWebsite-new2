@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增校园猫咪</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div style="max-width: 600px; margin: 5rem auto; padding: 0 1rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">新增校园猫咪</h2>
+        <form method="POST">
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem;">猫咪名字：</label>
+                <input type="text" name="name" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem;">性别：</label>
+                <input type="text" name="gender" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem;">性格：</label>
+                <input type="text" name="personality" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem;">出没地：</label>
+                <input type="text" name="location" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem;">图片文件名（如cat4.jpg）：</label>
+                <input type="text" name="img" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" style="padding: 0.8rem 2rem; border: none; border-radius: 8px; background: #2980b9; color: white; cursor: pointer;">保存</button>
+                <a href="/" style="margin-left: 1rem; padding: 0.8rem 2rem; border-radius: 8px; background: #999; color: white; text-decoration: none;">返回</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
