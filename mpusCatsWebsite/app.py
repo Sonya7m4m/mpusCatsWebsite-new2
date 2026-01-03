@@ -1,6 +1,6 @@
 import os
-# 新增这行：强制声明Flask入口文件
-os.environ['FLASK_APP'] = 'app.py'
+os.environ["FLASK_APP"] = "app.py"
+os.environ["FLASK_ENV"] = "production"
 
 from flask import Flask, render_template, request, redirect, flash, url_for
 import json
@@ -234,4 +234,5 @@ def handler(event, context):
 # 本地运行入口（保留）
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
+
 
