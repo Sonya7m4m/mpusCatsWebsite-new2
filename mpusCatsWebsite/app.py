@@ -222,14 +222,16 @@ def delete_cat(cat_id):
     flash('猫咪删除成功！')
     return redirect(url_for('index'))
 
+# ===== Vercel Serverless 核心入口（必须保留）=====
+# Vercel Serverless 终极适配入口（替换原来的handler）
+def handler(event, context):
+    from werkzeug.wsgi import DispatcherMiddleware
+    # 强制指定根路径，解决404
+    app.config['APPLICATION_ROOT'] = '/'
+    # 适配Vercel的WSGI调用
+    return DispatcherMiddleware(app).wsgi_app(event, context)
 
-# 本地运行入口
+# 本地运行入口（保留）
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
 
-
-# ===== Vercel Serverless 核心入口（必须保留）=====
-def handler(event, context):
-    from werkzeug.middleware.dispatcher import DispatcherMiddleware
-
-    return DispatcherMiddleware(app).wsgi_app(event, context)
