@@ -1,0 +1,69 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "海参",
+      "personality": "温顺",
+      "location": "操场边",
+      "img": "cat1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "朵朵",
+      "personality": "粘人",
+      "location": "食堂门口",
+      "img": "cat2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "温初实",
+      "personality": "高冷",
+      "location": "操场边",
+      "img": "cat3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "嘎嘎",
+      "personality": "胆小",
+      "location": "二饭门口",
+      "img": "cat4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "小灰",
+      "personality": "懒",
+      "location": "操场边",
+      "img": "cat5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "罐罐",
+      "personality": "贪吃",
+      "location": "饭堂后面",
+      "img": "cat6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "柿子",
+      "personality": "生人勿近",
+      "location": "B栋行政楼后",
+      "img": "cat7.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "cat_id": 1,
+      "content": "好乖的橘猫！每天都在图书馆旁看到它",
+      "img": "",
+      "time": "2026-01-02 10:00"
+    },
+    {
+      "id": 2,
+      "cat_id": 1,
+      "content": "喂过它一次小鱼干，超亲人～",
+      "img": "",
+      "time": "2026-01-02 11:30"
+    }
+  ]
+}
