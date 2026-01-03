@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
 import os
+# 新增这行：强制声明Flask入口文件
+os.environ['FLASK_APP'] = 'app.py'
+
+from flask import Flask, render_template, request, redirect, flash, url_for
 import json
 from datetime import datetime
 from werkzeug.utils import secure_filename
@@ -228,4 +231,5 @@ if __name__ == '__main__':
 # ===== Vercel Serverless 核心入口（必须保留）=====
 def handler(event, context):
     from werkzeug.middleware.dispatcher import DispatcherMiddleware
+
     return DispatcherMiddleware(app).wsgi_app(event, context)
